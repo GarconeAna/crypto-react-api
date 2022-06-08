@@ -24,6 +24,11 @@ function App() {
       .catch(error => console.log(error));
   }, []);
 
+  // função para pegar o que o usuario escreve em search
+  const handleChange = e => {
+    setSearch(e.target.value);
+  }
+
   return (
     <div className="app">
       <div className='app-search'>
@@ -32,6 +37,7 @@ function App() {
           <input
             className='app-input'
             type='text'
+            onChange={handleChange}
             placeholder='Search'
           />
         </form>
