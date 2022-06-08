@@ -43,7 +43,18 @@ function App() {
           />
         </form>
       </div>
-      <Coin/>
+      {coins.map(coin => {
+        return <Coin
+          key={coin.id}
+          symbol={coin.symbol}
+          name={coin.name}
+          image={coin.image}
+          price={coin.current_price}
+          marketcap={coin.market_cap}
+          volume={coin.total_volume}
+          priceChange={coin.price_change_percentage_24h}
+        />
+      })}
     </div>
   </>;
 }
