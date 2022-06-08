@@ -30,6 +30,10 @@ function App() {
     setSearch(e.target.value);
   }
 
+  const filteredCoins = coins.filter(coin => 
+    coin.name.toLowerCase().includes(search.toLocaleLowerCase())
+  );
+
   return <>
     <div className="app">
       <div className='app-search'>
@@ -43,7 +47,7 @@ function App() {
           />
         </form>
       </div>
-      {coins.map(coin => {
+      {filteredCoins.map(coin => {
         return <Coin
           key={coin.id}
           symbol={coin.symbol}
