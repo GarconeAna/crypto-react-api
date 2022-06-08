@@ -6,6 +6,7 @@ function App() {
   // url=https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
 
   const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     axios
@@ -24,8 +25,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>HELLO YOUTUBE</h1>
+    <div className="app">
+      <div className='app-search'>
+        <h1 className='app-title'>Search a currency</h1>
+        <form>
+          <input
+            className='app-input'
+            type='text'
+            placeholder='Search'
+          />
+        </form>
+      </div>
     </div>
   );
 }
