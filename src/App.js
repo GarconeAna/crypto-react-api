@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
+import Coin from './components/Coin';
 
 function App() {
   // url=https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
@@ -29,7 +30,7 @@ function App() {
     setSearch(e.target.value);
   }
 
-  return (
+  return <>
     <div className="app">
       <div className='app-search'>
         <h1 className='app-title'>Search a currency</h1>
@@ -42,8 +43,9 @@ function App() {
           />
         </form>
       </div>
+      <Coin/>
     </div>
-  );
+  </>;
 }
 
 export default App;
