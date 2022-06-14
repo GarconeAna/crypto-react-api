@@ -8,6 +8,7 @@ briancodex [Projeto Cryptocurrency](https://github.com/briancodex/react-api-proj
 
 <!-- ### `deploy`
 
-Espaço para quando fizer deploy -->
+Espaço para quando fizer deploy
+**Note: Aprendi a fazer requisições com axios.** -->
 
-**Note: Aprendi a fazer requisições com axios.**
+
